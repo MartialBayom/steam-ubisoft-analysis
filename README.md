@@ -1,4 +1,4 @@
-# 🎮 Steam — Analyse Big Data pour Ubisoft
+# Steam - Analyse Big Data pour Ubisoft
 
 > *Analyser des millions de données de la plateforme Steam avec PySpark sur Databricks pour aider Ubisoft à mieux comprendre le marché du jeu vidéo*
 
@@ -9,13 +9,13 @@
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 Analyser le catalogue Steam à grande échelle pour répondre aux questions stratégiques d'Ubisoft : quels genres performent le mieux, quel est le sweet spot de prix, quels éditeurs dominent le marché en satisfaction utilisateur ?
 
 ---
 
-## 📊 Résultats clés
+## Résultats clés
 
 | Indicateur | Valeur |
 |---|---|
@@ -29,15 +29,14 @@ Analyser le catalogue Steam à grande échelle pour répondre aux questions stra
 
 ---
 
-## 🗂️ Structure du projet
+## Structure du projet
 
 ```
-steam/
+steam-ubisoft-analysis/
 ├── data/
-│   └── steam_games.json              # Dataset brut (extrait S3)
+│   └── README.md                                  # Chemin S3 vers le dataset (non versionné)
 ├── notebooks/
-│   ├── 01_eda_pyspark.ipynb          # Analyse exploratoire avec PySpark
-│   └── 02_insights_ubisoft.ipynb     # Insights stratégiques pour Ubisoft
+│   └── Steam_Analysis_Ubisoft_Project.ipynb        # EDA PySpark + insights stratégiques Ubisoft
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -45,7 +44,7 @@ steam/
 
 ---
 
-## 🧠 Features analysées
+## Features analysées
 
 | Feature | Description |
 |---|---|
@@ -60,7 +59,7 @@ steam/
 
 ---
 
-## 📈 Insights clés pour Ubisoft
+## Insights clés pour Ubisoft
 
 - Les **RPG et jeux d'action** ont le meilleur ratio avis positifs parmi les AAA
 - Les jeux **multi-plateformes** obtiennent **+12%** d'avis positifs
@@ -69,19 +68,35 @@ steam/
 
 ---
 
-## ⚙️ Installation
+## Exécution
 
+> Ce notebook utilise les variables `spark` et `display()` fournies automatiquement par
+> l'environnement **Databricks**. Il ne s'exécute **pas** tel quel avec un simple `jupyter notebook`
+> en local - il faut soit l'exécuter sur un cluster Databricks, soit adapter le code pour créer
+> une `SparkSession` locale et remplacer `display()` par `.show()` / `.toPandas()`.
+
+**Sur Databricks (recommandé) :**
 ```bash
 git clone https://github.com/MartialBayom/steam-ubisoft-analysis.git
+```
+Importer `notebooks/Steam_Analysis_Ubisoft_Project.ipynb` dans un Workspace Databricks,
+l'attacher à un cluster, puis exécuter.
+
+**En local (nécessite une adaptation du notebook) :**
+```bash
 cd steam-ubisoft-analysis
 pip install -r requirements.txt
-# PySpark nécessite Java 8+
-jupyter notebook notebooks/01_eda_pyspark.ipynb
+# Java 8+ requis pour PySpark
+# Ajouter en début de notebook :
+#   from pyspark.sql import SparkSession
+#   spark = SparkSession.builder.appName("steam-ubisoft").getOrCreate()
+# Puis remplacer chaque display(df) par df.show() ou df.toPandas()
+jupyter notebook notebooks/Steam_Analysis_Ubisoft_Project.ipynb
 ```
 
 ---
 
-## 🏗️ Infrastructure
+##  Infrastructure
 
 ```
 AWS S3 (dataset JSON ~5GB)
@@ -97,11 +112,11 @@ Présentation Ubisoft
 
 ---
 
-## 👤 Auteur
+##  Auteur
 
 | | Nom | Rôle |
 |---|---|---|
-| 🧑‍💻 | **Martial BAYOM** | Data Science |
+|  | **Martial BAYOM** | Data Science |
 
 Projet réalisé dans le cadre de la **certification Jedha AI School** (RNCP Niveau 6)
 
