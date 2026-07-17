@@ -122,8 +122,20 @@ Projet réalisé dans le cadre de la **certification Jedha AI School** (RNCP Niv
 
 ---
 
-## 📂 Sources
+## Sources
 
 | Dataset | Source |
 |---|---|
 | Steam Games Dataset | AWS S3 — Jedha AI School |
+
+
+---
+
+## Notebook publié
+
+Le notebook complet (analyse PySpark + visualisations Databricks) est consultable en ligne, sans compte requis :
+
+ [Voir le notebook Steam_Analysis_Ubisoft (3) — version publiée](https://htmlpreview.github.io/?https://github.com/MartialBayom/steam-ubisoft-analysis/blob/main/Steam_Analysis_Ubisoft%20(3).html)
+
+> Note : le bouton natif « Publish » de Databricks (réservé à la Community Edition) n'était pas disponible sur l'espace de travail utilisé pour ce projet. Le notebook a donc été exporté en HTML avec ses résultats puis publié via [htmlpreview.github.io](https://htmlpreview.github.io) pour rester consultable publiquement par le jury.
+> 
