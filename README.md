@@ -1,4 +1,4 @@
-##Steam - Analyse Big Data pour Ubisoft
+## Steam - Analyse Big Data pour Ubisoft
 
 > *Analyser des millions de données de la plateforme Steam avec PySpark sur Databricks pour aider Ubisoft à mieux comprendre le marché du jeu vidéo*
 
