@@ -25,8 +25,7 @@ Analyser le catalogue Steam à grande échelle pour répondre aux questions stra
 | Prix médian des jeux bien notés | ~15€ |
 | Part des jeux gratuits | ~25% |
 
-> Les jeux **multi-plateformes** obtiennent **+12%** d'avis positifs. Le sweet spot de prix : **entre 10€ et 20€**.
-
+> Les jeux **multi-plateformes** obtiennent **+12%** d'avis positifs. Le sweet spot de prix : **entre 15E et 30E**.
 ---
 
 ## Structure du projet
